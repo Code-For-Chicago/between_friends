@@ -170,13 +170,22 @@
 					<?php if( have_posts() ): while ( have_posts() ) : the_post(); ?>
 						<?php if( get_field('director_or_council') == 'director' ){ ?>
 						<div class="member-holder text-center text-md-left">
+						<?php if(get_field('board_member_photo')){ ?>
+								<?php // Not sure if this is best practice, but it works
+									$image = get_field('board_member_photo');
+									$size = 'thumbnail'; // thumbnail/medium/large/full/custom
+								if( $image ) {
+    								echo wp_get_attachment_image( $image, $size ); } ?>
+							<?php } ?>		
 							<h4 class="mb-0"><?php the_title(); ?></h4>
+					
 							<?php if(get_field('board_member_title')){ ?>
 								<?php the_field('board_member_title'); ?><br>
 							<?php } ?>
 							<?php if(get_field('board_member_company')){ ?>
 								<?php the_field('board_member_company'); ?>
 							<?php } ?>
+
 						</div>
 						<?php } ?>
 					<?php endwhile; endif; ?>
@@ -197,6 +206,13 @@
 					<?php if( have_posts() ): while ( have_posts() ) : the_post(); ?>
 						<?php if( get_field('director_or_council') == 'council' ){ ?>
 							<div class="member-holder text-center text-md-left">
+							<?php if(get_field('board_member_photo')){ ?>
+								<?php // Not sure if this is best practice, but it works
+									$image = get_field('board_member_photo');
+									$size = 'thumbnail'; // thumbnail/medium/large/full/custom
+								if( $image ) {
+    								echo wp_get_attachment_image( $image, $size ); } ?>
+							<?php } ?>	
 							<h4 class="mb-0"><?php the_title(); ?></h4>
 							<?php if(get_field('board_member_title')){ ?>
 								<?php the_field('board_member_title'); ?><br>

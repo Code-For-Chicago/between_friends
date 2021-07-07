@@ -169,7 +169,7 @@
 					)); ?>
 					<?php if( have_posts() ): while ( have_posts() ) : the_post(); ?>
 						<?php if( get_field('director_or_council') == 'director' ){ ?>
-						<div class="member-holder text-center text-md-left">
+						<div class="member-holder text-center">
 						<?php if(get_field('board_member_photo')){ ?>
 								<?php // Not sure if this is best practice, but it works
 									$image = get_field('board_member_photo');
@@ -205,7 +205,7 @@
 					)); ?>
 					<?php if( have_posts() ): while ( have_posts() ) : the_post(); ?>
 						<?php if( get_field('director_or_council') == 'council' ){ ?>
-							<div class="member-holder text-center text-md-left">
+							<div class="member-holder text-center">
 							<?php if(get_field('board_member_photo')){ ?>
 								<?php // Not sure if this is best practice, but it works
 									$image = get_field('board_member_photo');

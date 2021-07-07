@@ -399,7 +399,8 @@ strong,
 
 section.page,
 section.post,
-section.jobs {
+section.jobs,
+section.board {
   padding-top: 175px;
   padding-bottom: 2em;
 }

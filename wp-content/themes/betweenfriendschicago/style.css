@@ -399,7 +399,8 @@ strong,
 
 section.page,
 section.post,
-section.jobs {
+section.jobs,
+section.board {
   padding-top: 175px;
   padding-bottom: 2em;
 }
@@ -709,6 +710,20 @@ a.engSpan {
   font-size: 0.95em;
   margin-bottom: 3em;
   break-inside: avoid;
+}
+
+.member-holder-link {
+  color: #333;
+  transition: all 0.25s ease;
+}
+
+.member-holder-link:hover {
+  text-decoration: none;
+  color: #333;
+}
+
+.member-holder-link:hover h4 {
+  text-decoration: underline;
 }
 
 .member-holder h4 {
